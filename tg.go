@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	//"os"
+	"os"
 	"bytes"
  	"encoding/json"
  	"fmt"
@@ -19,7 +19,7 @@ const (
 )
 
 func main(){
-	token:="7975988720:AAFngpKpCMOfpZDopfLELsJNM82B7fHnono"
+	token:=os.Getenv("TGKEY")
 
 	bot,err:=tgbotapi.NewBotAPI(token)
 	if err!= nil {
